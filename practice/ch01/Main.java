@@ -1,6 +1,4 @@
-
-import ch01.A1.BookShelfIterator;
-import ch01.Sample.BookShelf;
+import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,18 +19,22 @@ public class Main {
 
         // 한 권씩 꺼내오기
         for (Book book : bs1) {
-            System.out.prtinlnt(book.getName());
+            System.out.println(book.getName());
         }
 
         // iterator 패턴
         // 1. 책꽂이한테 책꽂이 반복자를 요청해서 얻음
-       Iterator<Book> i = bs1.iterator();
+        Iterator<Book> it = bs1.iterator();
 
         // 2. 책꽂이 반복자를 이용해서 책을 한권씩 꺼내옴
         while(it.hasNext()) {
             Book book = it.next();
             System.out.println(book.getName());
         }
+
+        // 책꽂이 만든 개발자, 책꽂이 이용하는 개발자
+
+
 
     }
 }

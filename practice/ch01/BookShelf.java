@@ -1,12 +1,10 @@
 
 import java.util.Iterator;
 
-import ch01.A1.BookShelfIterator;
-
 public class BookShelf implements Iterable<Book> {
     private Book[] books; // 배열 선언
     private int last;
-    private BookShelfIterator bookShelfIterator;
+    private Iterator bookShelfIterator;
 
     public BookShelf(int size) {
         this.books = new Book[size];
