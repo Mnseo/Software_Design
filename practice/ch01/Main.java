@@ -13,6 +13,10 @@ public class Main {
         // 책꽂이 생성
         BookShelf bs1 = new BookShelf(10);
 
+        for (int i = 0; i<bs1.getLength(); i++) {
+            System.out.println(bs1.getBookFrom(i).getName().toString());
+        }
+
         for (int i = 0; i < bs1.getLength(); i++) {
             bs1.appendBook(b5);
         }
@@ -33,7 +37,8 @@ public class Main {
         }
 
         // 책꽂이 만든 개발자, 책꽂이 이용하는 개발자
-
+        // 책꽂이 + 아이터레이터 패턴을 적용 
+        
 
 
     }

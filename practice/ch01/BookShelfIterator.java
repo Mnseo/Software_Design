@@ -1,23 +1,22 @@
 
 import java.util.Iterator;
 
-import ch01.Sample.BookShelf;
 
 // 책꽂이에서 책을 한 권씩 꺼내오는 반복자 
 public class BookShelfIterator implements Iterator<Book> {
 
-    private Book bookShelf;
+    private BookShelf bookShelf;
     private int index;
 
-    public BookShelfIterator(BookShelf bookshelf) {
-        this.bookShelf = bookshelf;
-        this.index = bookshelf.getLength();
+    public BookShelfIterator(BookShelf bookshelf2) {
+        this.bookShelf = bookshelf2;
+        this.index = bookShelf.getLength();
     }
 
     @Override
     // 꺼내올 원소가 더 있는지 검사하는 메소드
     public boolean hasNext() {
-        if (index < bookshelf.getLength()) {
+        if (index < bookShelf.getLength()) {
             return true;
         } else
             return false;

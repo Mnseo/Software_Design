@@ -1,27 +1,33 @@
 
 import java.util.Iterator;
+import java.util.*;
 
 public class BookShelf implements Iterable<Book> {
-    private Book[] books; // 배열 선언
-    private int last;
+    //private Book[] books;
+    private List<Book> books; // 배열 선언
+    private int last = 0;
     private Iterator bookShelfIterator;
 
     public BookShelf(int size) {
-        this.books = new Book[size];
+        //배열 생성
+        //this.books = new Book[size];
+
+        //ArrayList 생성
+        this.books = new ArrayList<Book>(size);
 
     }
 
-    Book getBookAt(int index) {
-        return books[index];
+    Book getBookFrom(int index) {
+        return books.get(index);
     }
 
     public void appendBook(Book book) {
-        books[last] = book;
+        books.add(book);
         last++;
     }
 
     public int getLength() {
-        return last;
+        return books.size();
     }
 
     // 책꽂이 반복자를 리턴하는 메소드 생성
